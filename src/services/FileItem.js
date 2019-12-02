@@ -24,8 +24,8 @@ export default function __identity($compile, FileLikeObject) {
          * @constructor
          */
         constructor(uploader, some, options) {
-            var isInput = isElement(some);
-            var input = isInput ? element(some) : null;
+            var isInput = !!some.input;
+            var input = isInput ? element(some.input) : null;
             var file = !isInput ? some : null;
 
             extend(this, {
