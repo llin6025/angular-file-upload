@@ -757,7 +757,7 @@ export default function __identity(fileUploaderOptions, $rootScope, $http, $wind
          * @param {FileItem} item
          * @private
          */
-        _onCompleteItem(item) {
+        _onTimeoutItem(item) {
             item._onTimeout();
             this.onTimeoutItem(item);
         }
